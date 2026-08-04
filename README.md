@@ -43,5 +43,5 @@ Built and iterated on solo — including several real production-style debugging
 
 ### 📫 Reach me
 
-- LinkedIn: [linkedin.com/in/alperkaansahin](https://www.linkedin.com/in/alperkaansahin/)
+- LinkedIn: [linkedin.com/in/alperkaansahin](https://www.linkedin.com/in/alper-kaan-şahin-3341a228a/)
 - GitHub: you're already here 👀
