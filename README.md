@@ -1,20 +1,27 @@
 ### Hi, I'm Alper 👋
 
-Junior Software Engineer focused on backend systems, REST APIs, and mobile app development.
+Software Engineer focused on backend systems, REST APIs, and mobile application development.
 
-I'm a recent graduate who builds full-stack products end-to-end — from database design to native mobile UI — rather than just following tutorials. My focus right now is landing a junior backend/full-stack role while shipping real, working software.
+I'm a recent software engineering graduate who enjoys designing scalable backend systems and building full-stack applications from database design to mobile UI.
 
 ---
 
 ### 🍃 Featured Project — [Expiry](https://github.com/AlperKaanSahin/expiry)
 
-A full-stack food-waste marketplace connecting customers with local shops selling near-expiry products at a discount.
+A full-stack mobile marketplace that helps reduce food waste by connecting consumers with local markets offering discounted products nearing their expiration date.
 
-- **React Native (Expo)** mobile app with a custom workspace-based navigation architecture (one account, three roles — customer, shop owner, admin — switchable without re-login)
-- **Node.js / Express** backend with a layered architecture (controllers → services → models) and an event-driven system for notifications and audit logs
-- **MySQL / Sequelize**, JWT auth with refresh token rotation, QR-based delivery confirmation, rate limiting, and more
+### Highlights
 
-Built and iterated on solo — including several real production-style debugging sessions (navigation race conditions, security hardening, pagination strategy for aggregate-filtered queries) documented in commit history.
+- 📱 React Native (Expo) mobile application
+- ⚙️ Node.js / Express backend following a layered architecture
+- 🔄 Event-driven notifications and audit logging
+- 🔐 JWT authentication with refresh token rotation
+- 📦 MySQL & Sequelize ORM
+- 📷 QR-based order pickup workflow
+- 🛡️ Server-side validation, rate limiting, and role-based authorization
+- 🏗️ Workspace-based architecture allowing customer, market, and admin experiences within a single account
+
+Built and maintained as a solo project, covering the complete development lifecycle from architecture and implementation to testing and production readiness.
 
 ---
 
@@ -44,4 +51,3 @@ Built and iterated on solo — including several real production-style debugging
 ### 📫 Reach me
 
 - LinkedIn: [linkedin.com/in/alperkaansahin](https://www.linkedin.com/in/alper-kaan-şahin-3341a228a/)
-- GitHub: you're already here 👀
