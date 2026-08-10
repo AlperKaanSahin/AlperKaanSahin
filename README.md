@@ -27,4 +27,4 @@ Node.js · Express · Sequelize · MySQL · React Native (Expo) · JWT · Fireba
 
 ### Elsewhere
 
-[LinkedIn](https://www.linkedin.com/in/alper-kaan-şahin-3341a228a/) · you're already on my GitHub
+[LinkedIn](https://www.linkedin.com/in/alper-kaan-şahin-3341a228a/)
