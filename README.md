@@ -1,53 +1,30 @@
-### Hi, I'm Alper 👋
+### Hey, I'm Alper 👋
 
-Software Engineer focused on backend systems, REST APIs, and mobile application development.
-
-I'm a recent software engineering graduate who enjoys designing scalable backend systems and building full-stack applications from database design to mobile UI.
+Recent software engineering graduate. I build backend systems and full-stack apps — mostly Node.js and React Native — and I'd rather understand *why* something works than just get it working.
 
 ---
 
-### 🍃 Featured Project — [Expiry](https://github.com/AlperKaanSahin/expiry)
+### What I've been building — [Expiry](https://github.com/AlperKaanSahin/expiry)
 
-A full-stack mobile marketplace that helps reduce food waste by connecting consumers with local markets offering discounted products nearing their expiration date.
+A marketplace app for near-expiry groceries — shops list discounted products before they go to waste, customers pick them up with a QR code. Solo project, backend to mobile UI, still in active development.
 
-### Highlights
+The part I'm most proud of isn't a feature — it's a mistake I fixed. I originally modeled customer/shop-owner/admin as separate app "modes" and wired navigation with ad-hoc state and imperative `navigate()` calls. It worked until it didn't — race conditions, wrong screens on notification taps, flicker between views. I ended up rebuilding it around a proper separation: identity (who you are), permissions (what you're allowed to do), and workspace (which experience you're currently in). Same account, instant switching, no re-login. It's a small thing conceptually but it's the difference between code that *happens* to work and code you can reason about.
 
-- 📱 React Native (Expo) mobile application
-- ⚙️ Node.js / Express backend following a layered architecture
-- 🔄 Event-driven notifications and audit logging
-- 🔐 JWT authentication with refresh token rotation
-- 📦 MySQL & Sequelize ORM
-- 📷 QR-based order pickup workflow
-- 🛡️ Server-side validation, rate limiting, and role-based authorization
-- 🏗️ Workspace-based architecture allowing customer, market, and admin experiences within a single account
+A few other things in there:
+- Event-driven notifications (order/shop status changes → in-app notification + real push via FCM, same event bus)
+- Two-step pagination for the one endpoint where filtering depends on an aggregate (available stock), so I'm not loading full tables into memory
+- JWT auth with refresh token rotation, rate limiting, and a couple of security bugs I found and fixed along the way (a missing auth check on a shop route, a user-enumeration issue in password reset)
 
-Built and maintained as a solo project, covering the complete development lifecycle from architecture and implementation to testing and production readiness.
+Still working on: real payment integration (Iyzico), a few pre-launch security passes, and yes — actual tests.
 
 ---
 
-### 🛠️ Tech Stack
+### Stack
 
-**Languages & Runtime**
-![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
-![Node.js](https://img.shields.io/badge/-Node.js-339933?style=flat-square&logo=node.js&logoColor=white)
-
-**Frontend**
-![React Native](https://img.shields.io/badge/-React%20Native-61DAFB?style=flat-square&logo=react&logoColor=black)
-![Expo](https://img.shields.io/badge/-Expo-000020?style=flat-square&logo=expo&logoColor=white)
-
-**Backend**
-![Express](https://img.shields.io/badge/-Express-000000?style=flat-square&logo=express&logoColor=white)
-![Sequelize](https://img.shields.io/badge/-Sequelize-52B0E7?style=flat-square&logo=sequelize&logoColor=white)
-
-**Database**
-![MySQL](https://img.shields.io/badge/-MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white)
-
-**Tools**
-![Git](https://img.shields.io/badge/-Git-F05032?style=flat-square&logo=git&logoColor=white)
-![Postman](https://img.shields.io/badge/-Postman-FF6C37?style=flat-square&logo=postman&logoColor=white)
+Node.js · Express · Sequelize · MySQL · React Native (Expo) · JWT · Firebase Cloud Messaging
 
 ---
 
-### 📫 Reach me
+### Elsewhere
 
-- LinkedIn: [linkedin.com/in/alperkaansahin](https://www.linkedin.com/in/alper-kaan-şahin-3341a228a/)
+[LinkedIn](https://www.linkedin.com/in/alper-kaan-şahin-3341a228a/) · you're already on my GitHub
