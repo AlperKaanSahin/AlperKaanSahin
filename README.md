@@ -12,14 +12,15 @@ The part I'm most proud of isn't a feature — it's a mistake I fixed. I origina
 
 A few other things in there:
 
+* Built the real payment flow on Iyzico's marketplace model — hosted checkout, per-shop submerchant onboarding, and escrow-style payouts that only release once the buyer confirms delivery by QR code. Added webhook signature verification (HMAC, independent of the checkout callback path) as a second, asynchronous line of defense against forged "payment succeeded" requests
 * Event-driven notifications (order/shop status changes → in-app notification + real push via FCM, same event bus), including tap-to-navigate routing that respects the workspace model above
 * Found and fixed a real database race condition: two concurrent requests could both reserve the last unit of stock. Fixed with row-level locking (`SELECT ... FOR UPDATE`) instead of a naive read-then-write
 * Two-step pagination for the one endpoint where filtering depends on an aggregate (available stock), so I'm not loading full tables into memory
 * JWT auth with refresh token rotation and rate limiting, plus a self-audit that turned up (and fixed) two real issues: an authorization gap that let a buyer skip QR verification and self-confirm their own delivery, and an upload endpoint trusting the client's claimed file type instead of the file's actual content
 * Centralized error handling (custom `AppError` class + async wrapper) across the whole API, so internal errors never leak implementation details to clients
-* CI via GitHub Actions for both backend and mobile — dependency validation, Expo config checks, and Jest unit tests focused on the logic I trust least, like the stock-locking above
+* CI via GitHub Actions for both backend and mobile — dependency validation, Expo config checks, and Jest unit tests focused on the logic I trust least, like the stock-locking and payment flow above
 
-Still working on: Iyzico payment integration is architecturally done (submerchant model, checkout flow) but blocked on a business registration requirement on their end — and expanding test coverage beyond the highest-risk logic.
+Still working on: Iyzico integration is fully working end-to-end in sandbox (submerchant onboarding, checkout, escrow payouts, webhook verification) — what's left is switching to live merchant credentials for production. Also continuing to expand test coverage beyond the highest-risk logic.
 
 ---
 
